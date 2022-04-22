@@ -6,6 +6,7 @@ body {
   background-size: cover;
   width: 100vw;
   height: 100vh;
+  font-family: "Roboto", sans-serif;
 }
 main {
   display: flex;
@@ -17,6 +18,88 @@ main {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 60%;
-  margin: 2em 0;
+  width: 70%;
+  height: 10vh;
+  margin: 2em;
+  padding: 0 2em;
+  box-shadow: 0 8px 32px 0 rgb(90 38 135 / 37%);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+#super-glass-searchbar h1 {
+  color: white;
+  font-size: 1.8rem;
+}
+
+.search input {
+  height: 1.8rem;
+  border-radius: 10px;
+  padding: 0 0.8rem;
+  border-style: none;
+  font-size: 16px;
+}
+
+#forecast {
+  display: flex;
+  width: 80%;
+  justify-content: space-around;
+}
+
+#left-cards {
+  flex-basis: 40vw;
+}
+
+#right-card {
+  flex-basis: 20vw
+}
+.card {
+  display: flex;
+  justify-content: space-around;
+  background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: opacity 300ms;
+}
+
+#left-cards > .card{
+  height: 30vh;
+  margin: 2em;
+}
+
+.card .day-stats {
+
+}
+#attributes {
+ display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
+.attribute img, .attribute p {
+  display: inline;
+}
+
+#attributes img {
+  display: inline;
+  margin-right: 0;
+  width: 1.5em;
+}
+
+#attributes p {
+  font-size: 20px;
+}
+
+#values {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#values p {
+  font-size: 20px;
 }
