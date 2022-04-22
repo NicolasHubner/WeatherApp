@@ -11,36 +11,43 @@
 	<body>
 		<main>
 			<section id="super-glass-searchbar">
-				<h1>HR WeatherApp</h1>
+				<h1>HR's WeatherApp</h1>
 				<div class="search">
 					<input type="text" placeholder="Search" />
 					<button id="doSearch"><img src="btn-images/search-btn.svg" alt="Search Button"></button>
 				</div>
 			</section>
 			<section id="forecast">
-				<div id="leftCards">
+				<div id="left-cards">
 					<div class="card">
-						<div class="daystats">
-							<h2 class="city"></h2>
-							<h1 class="temp"></h1>
-							<h3 class="sky"></h3>
-							<h3 class="rain"></h3>
+						<div class="day-stats">
+							<h2 class="city">belo horizonte</h2>
+							<h1 class="temp">23°</h1>
+							<h3 class="sky">clear</h3>
+							<h3 class="rain">0% chance</h3>
 						</div>
-						<div class="dayimages">
-							<img src="" alt="" id="dayImage" />
-							<p id="daytemps"></p>
+						<div class="day-images">
+							<img src="sky-images/sun.svg" alt="sun" id="dayImage" />
+							<p id="daytemps">32/19</p>
 						</div>
 					</div>
 					<div class="card">
 						<div id="attributes">
-							<img src="attribute-images/wind.svg" alt="Icon of wind" />
-							<p>Wind</p>
-							<img src="attribute-images/humidity.svg" alt="Humidity icon" />
-							<p>Humidity</p>
-							<img src="attribute-images/uv.svg" alt="UV rays icon" />
-							<p>UV</p>
-							<img src="attribute-images/pressure.svg" alt="Pressure icon" />
-							<p>Pressure</p>
+              <div class="attribute">
+                <img src="attribute-images/wind.svg" alt="Icon of wind" />
+                <p>Wind</p>
+              </div>
+              <div class="attribute">
+                <img src="attribute-images/humidity.svg" alt="Humidity icon" />                <p>Humidity</p>
+              </div>
+              <div class="attribute">
+                <img src="attribute-images/uv.svg" alt="UV rays icon" />
+                <p>UV</p>
+              </div>
+              <div class="attribute">
+                <img src="attribute-images/pressure.svg" alt="Pressure icon" />
+                <p>Pressure</p>
+              </div>
 						</div>
 						<div id="values">
 							<p id="wind" class="value">6km/h</p>
@@ -50,7 +57,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="card" id="rightCard">
+				<div class="card" id="right-card">
 					<div class="day">
 						<div class="stats">aaaa</div>
 						<div class="images"></div>
