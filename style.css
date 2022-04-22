@@ -41,6 +41,13 @@ main {
   font-size: 16px;
 }
 
+.search button {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+  /* transform: scale(1.2); */
+  border: 1px solid rgba(255, 255, 255, 0.7)
+}
+
 #forecast {
   display: flex;
   width: 80%;
@@ -66,6 +73,48 @@ main {
     transition: opacity 300ms;
 }
 
+.card .day-stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+.card .day-stats h2 {
+font-size: 1.2em;
+text-transform: capitalize;
+font-weight: bold;
+}
+
+.card .day-stats h3 {
+  text-transform: capitalize;
+  font-size: 1.2em;
+}
+
+.card .day-stats h1 {
+  font-size: 2em;
+}
+
+#daytemps {
+  font-size: 2em;
+}
+
+
+
+
+.card .day-images {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: inherit;
+}
+
+.card .day-images img {
+  width: 100%;
+}
+
+
+
 #left-cards > .card{
   height: 30vh;
   margin: 2em;
@@ -82,13 +131,13 @@ main {
 
 
 .attribute img, .attribute p {
-  display: inline;
+  display: inline; 
 }
 
 #attributes img {
   display: inline;
   margin-right: 0;
-  width: 1.5em;
+  width: 1.5em;;
 }
 
 #attributes p {
