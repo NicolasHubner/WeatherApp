@@ -36,17 +36,17 @@ function atribuingElements(cityObject){
     const humidity = document.querySelector('#humidity');
     const uv = document.querySelector('#uv');
     const pressure = document.querySelector('#pressure');
-    city.textContent = cityObject.address;
+    city.textContent = cityObject.resolvedAddress;
     temp.textContent = `${cityObject.currentConditions.temp}°`;
     sky.textContent = cityObject.currentConditions.conditions;
-    rain.textContent = cityObject.currentConditions.precipprob;
+    rain.textContent = rainfunction(cityObject.currentConditions.precipprob);
     tempMaxtempMin.textContent = `${cityObject.days[0].tempmax}°/${cityObject.days[0].tempmin}°`
     wind.textContent = `${cityObject.currentConditions.windspeed}km/h`;
     humidity.textContent = `${cityObject.currentConditions.humidity}%`;
     uv.textContent = `${cityObject.currentConditions.uvindex} of 10`;
     pressure.textContent = `${cityObject.currentConditions.pressure}mb`;
 }
-
+const rainfunction = (objectrain) => objectrain === null ? `0%chance` : objectrain;
 
 
 
