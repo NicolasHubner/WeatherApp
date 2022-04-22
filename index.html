@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Hubner and Ridley's Weather App</title>
+		<link href="reset.css" rel="stylesheet" />
+		<link href="style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<main>
+			<section id="super-glass-searchbar">
+				<h1>HR WeatherApp</h1>
+				<div class="search">
+					<input type="text" placeholder="Search" />
+					<button id="doSearch"><img src="btn-images/search-btn.svg" alt="Search Button"></button>
+				</div>
+			</section>
+			<section id="forecast">
+				<div id="leftCards">
+					<div class="card">
+						<div class="daystats">
+							<h2 class="city"></h2>
+							<h1 class="temp"></h1>
+							<h3 class="sky"></h3>
+							<h3 class="rain"></h3>
+						</div>
+						<div class="dayimages">
+							<img src="" alt="" id="dayImage" />
+							<p id="daytemps"></p>
+						</div>
+					</div>
+					<div class="card">
+						<div id="attributes">
+							<img src="attribute-images/wind.svg" alt="Icon of wind" />
+							<p>Wind</p>
+							<img src="attribute-images/humidity.svg" alt="Humidity icon" />
+							<p>Humidity</p>
+							<img src="attribute-images/uv.svg" alt="UV rays icon" />
+							<p>UV</p>
+							<img src="attribute-images/pressure.svg" alt="Pressure icon" />
+							<p>Pressure</p>
+						</div>
+						<div id="values">
+							<p id="wind" class="value">6km/h</p>
+							<p id="humidity" class="value">60%</p>
+							<p id="uv" class="value">3 of 10</p>
+							<p id="pressure" class="value">1023mb</p>
+						</div>
+					</div>
+				</div>
+				<div class="card" id="rightCard">
+					<div class="day">
+						<div class="stats">aaaa</div>
+						<div class="images"></div>
+					</div>
+					<div class="day">
+						<div class="stats"></div>
+						<div class="images"></div>
+					</div>
+					<div class="day">
+						<div class="stats"></div>
+						<div class="images"></div>
+					</div>
+					<div class="day">
+						<div class="stats"></div>
+						<div class="images"></div>
+					</div>
+					<div class="day">
+						<div class="stats"></div>
+						<div class="images"></div>
+					</div>
+					<div class="day">
+						<div class="stats"></div>
+						<div class="images"></div>
+					</div>
+					<div class="day">
+						<div class="stats"></div>
+						<div class="images"></div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>
