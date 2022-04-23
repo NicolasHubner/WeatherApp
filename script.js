@@ -8,6 +8,12 @@ const input = document.querySelector('input');
 const btnInput = document.querySelector('#doSearch');
 btnInput.addEventListener('click', getElementValue);
 
+input.addEventListener('keypress', function (e) {
+  if (e.key === 'Enter') {
+  getElementValue();
+  }
+});
+
 function getElementValue() {
 	const inputValue = input.value;
 	const cidade = inputValue.replaceAll(' ', '%20');
@@ -34,7 +40,7 @@ const checkWhichIcon = (condition) => {
 };
 
 const displayForecast = () => {
-	document.querySelector('.hidden').classList.remove('hidden')
+  if(document.querySelector('.hidden')) document.querySelector('.hidden').classList.remove('hidden')
 }
 
 function atribuingElements(cityObject) {
@@ -48,24 +54,30 @@ function atribuingElements(cityObject) {
 	const uv = document.querySelector('#uv');
 	const pressure = document.querySelector('#pressure');
 	const rightCard = document.querySelector('#right-card');
+  const srcImage = document.querySelector('#dayImage');
 	rightCard.innerHTML = ' ';
 	city.textContent = cityObject.resolvedAddress;
 	temp.textContent = `${cityObject.currentConditions.temp}°`;
 	sky.textContent = cityObject.currentConditions.conditions;
 	rain.textContent = rainfunction(cityObject.currentConditions.precipprob);
 	tempMaxtempMin.textContent = `${cityObject.days[0].tempmax}°/${cityObject.days[0].tempmin}°`;
-	wind.textContent = `${cityObject.currentConditions.windspeed}km/h`;
+	wind.textContent = windFunction(cityObject.currentConditions.windspeed);
 	humidity.textContent = `${cityObject.currentConditions.humidity}%`;
 	uv.textContent = `${cityObject.currentConditions.uvindex} of 10`;
 	pressure.textContent = `${cityObject.currentConditions.pressure}mb`;
+  srcImage.src = checkWhichIcon(cityObject.currentConditions.conditions);
 	asideFunction(rightCard, cityObject);
 	displayForecast();
+}
+
+function windFunction(windSpeed) {
+  if(!windSpeed) return '0 km/h';
+  return `${windSpeed}km/h`;
 }
 const rainfunction = (objectrain) =>
 	objectrain === null ? `0% Chance of rain` : objectrain;
 
 const asideFunction = (rightCard, cityObject) => {
-	console.log(cityObject);
 	for (let i = 1; i < 7; i++) {
 		const div = document.createElement('div');
 		div.classList.add('day');
