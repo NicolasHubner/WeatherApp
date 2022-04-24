@@ -1,5 +1,5 @@
 body {
-  background-image: url(/WeatherApp/bg-images/bg.jpg);
+  background-image: url(/bg-images/bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -52,10 +52,12 @@ main {
   border: 1px solid rgba(255, 255, 255, 0.7)
 }
 
+
 #forecast {
   display: flex;
   width: 80%;
   justify-content: space-around;
+  margin-bottom: 1rem;
 }
 
 #left-cards {
@@ -205,7 +207,7 @@ min-width: 12em;
 }
 
 .footer {
-  background-color: rgb(41, 41, 41);
+
   position:fixed;
   bottom: 0;
   left: 0;
@@ -215,14 +217,19 @@ min-width: 12em;
   gap: 10px;
   width: 100%;
   font-size: 20px;
-  color: white;
-  height: 64px;
+  color: black;
+  height: 56px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgb(90 38 135 / 37%);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 footer p {
     font-size: 16px;
+    font-weight: bold;
 }
 #github-logo {
-    fill: white;
+    fill: black;
 }
 #github-logo:hover {
   transform: scale(1.2);
